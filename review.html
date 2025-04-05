@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form">
+    <title>Thank You for Your Review!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        main {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #4a4e69;
+            font-weight: 400;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #review-count {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Thank you for your review!</h1>
+        <p id="review-count"></p>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (localStorage.getItem('reviewCount') === null) {
+                localStorage.setItem('reviewCount', 0);
+            }
+
+            let reviewCount = parseInt(localStorage.getItem('reviewCount'));
+            reviewCount += 1;
+            localStorage.setItem('reviewCount', reviewCount);
+
+            const reviewCountElement = document.getElementById('review-count');
+            if (reviewCountElement) {
+                reviewCountElement.textContent = `Number of reviews completed: ${reviewCount}`;
+            }
+        });
+    </script>
+</body>
+</html>
