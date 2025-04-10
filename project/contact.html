@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./styles.css/contact.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+    <nav>
+      <ul>
+        <li><a href="siteplan.html">Home</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="contact.html">Review</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <label for="product-name">What change am I going to make?</label>
+      <select id="product-name" name="product-name" required aria-label="Product Name">
+        <option value="" disabled selected>Choose an idea ...</option>
+      </select>
+
+      <div class="form-group">
+        <label>Overall Rating</label>
+        <div class="rating-box" id="overall-rating">
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5" ><label for="radio1">&#9733;</label>
+            <input id="radio2" type="radio" name="estrellas" value="4"><label for="radio2">&#9733;</label>
+            <input id="radio3" type="radio" name="estrellas" value="3"><label for="radio3">&#9733;</label>
+            <input id="radio4" type="radio" name="estrellas" value="2"><label for="radio4">&#9733;</label>
+            <input id="radio5" type="radio" name="estrellas" value="1"><label for="radio5">&#9733;</label>
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="installation-date">What day am I going to start?</label>
+        <input type="date" id="installation-date" name="installation-date" required aria-label="Installation Date">
+      </div>
+
+      <fieldset class="form-group">
+        <legend>Which idea did you find useful for the world? <em>(Check all that apply)</em></legend>
+        <div class="features">
+          <input type="checkbox" id="durability" name="features" value="durability">
+          <label for="durability">Use Reusable Bags</label>
+        </div>
+        <div class="features">
+          <input type="checkbox" id="ease-of-use" name="features" value="ease-of-use">
+          <label for="ease-of-use">Save Water</label>
+        </div>
+        <div class="features">
+          <input type="checkbox" id="performance" name="features" value="performance">
+          <label for="performance">Go Digital</label>
+        </div>
+        <div class="features">
+          <input type="checkbox" id="design" name="features" value="design">
+          <label for="design">Compost Food Waste</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+        <textarea id="written-review" name="written-review" aria-label="Written Review"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="user-name" name="user-name" aria-label="Your Name">
+      </div>
+
+      <input type="submit" value="Post Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoLife | <a href="references.html">References</a></p>   
+  </footer>
+
+  <script src="./scripts.js/contact.js"></script>
+</body>
+
+</html>
