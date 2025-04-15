@@ -1,7 +1,6 @@
 :root {
     --primary-color: #ff6f00; 
     --secondary-color: #fb923c;
-    --text-color: #333;
     --border-radius: 8px;
     --transition: 0.3s ease-in-out;
     --hover-color: orange;
@@ -168,11 +167,11 @@ textarea {
     color: var(--hover-color);
 }
 footer {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    color: #555;
-  }
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
 
   
   @media (min-width: 768px) {

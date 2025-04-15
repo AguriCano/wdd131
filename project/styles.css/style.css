@@ -5,6 +5,8 @@
 */
 
 :root {
+    --primary-color: #ff6f00; 
+    --secondary-color: #fb923c;
     --orange-main: #f97316;
     --orange-light: #fb923c;
     --bg-color: #fff7ed;
@@ -149,10 +151,10 @@
   
   
   footer {
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    color: #555;
+    padding: 1rem;
   }
   
   /* Responsive Design */

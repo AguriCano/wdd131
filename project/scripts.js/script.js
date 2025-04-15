@@ -24,4 +24,16 @@ quoteBtn?.addEventListener("click", () => {
   const selectedQuote = quotes[randomIndex];
   quoteDisplay.textContent = selectedQuote;
   localStorage.setItem("ecoQuote", selectedQuote);
+
 });
+
+const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+    const copyrightYearElement = document.getElementById('currentyear');
+    const lastModifiedElement = document.getElementById('lastModified');
+    if (copyrightYearElement) {
+        copyrightYearElement.textContent = currentYear;
+    }
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last update: ${lastModified}`;
+    }
